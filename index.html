@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+    <title>Work Day Scheduler</title>
+  </head>
+
+  <body>
+    <header class="jumbotron">
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p id="currentDay" class="lead"></p>
+    </header>
+
+    <div class="container">
+      <!-- Timeblocks go here -->
+      <div class="row past" id="9am">
+        <div class="col-sm-3 time" >
+          <div class="change" >9am</div>
+        </div>
+        <div class="col-sm-6 mid">
+          <div class="input-group mb-3">
+            <span class="input-group-text userInput" id="inputGroup-sizing-default">Add entry</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="input0">
+          </div>
+        </div>
+        <div class="col-sm-3 edit">
+          <button type="button" class="btn btn-primary" id="please">Save Entry</button>
+        </div>
+      </div>
+      <div class="row past" id="10am">
+        <div class="col-sm-3 time" >
+          <div class="change" >10am</div>
+        </div>
+        <div class="col-sm-6 mid">
+          <div class="input-group mb-3">
+            <span class="input-group-text userInput" id="inputGroup-sizing-default">Add entry</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="input1">
+          </div>
+        </div>
+        <div class="col-sm-3 edit">
+          <button type="button" class="btn btn-primary" id="please1">Save Entry</button>
+        </div>
+      </div>
+      <div class="row past" id="11am">
+        <div class="col-sm-3 time" >
+          <div class="change" >11am</div>
+        </div>
+        <div class="col-sm-6 mid">
+          <div class="input-group mb-3">
+            <span class="input-group-text userInput" id="inputGroup-sizing-default">Add entry</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="input2">
+          </div>
+        </div>
+        <div class="col-sm-3 edit">
+          <button type="button" class="btn btn-primary" id="please2">Save Entry</button>
+        </div>
+      </div>
+      <div class="row past" id="12pm">
+        <div class="col-sm-3 time">
+          <div class="change" >12pm</div>
+        </div>
+        <div class="col-sm-6 mid">
+          <div class="input-group mb-3">
+            <span class="input-group-text userInput" id="inputGroup-sizing-default">Add entry</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="input3">
+          </div>
+        </div>
+        <div class="col-sm-3 edit">
+          <button type="button" class="btn btn-primary" id="please3">Save Entry</button>
+        </div>
+      </div>
+      <div class="row past" id="1pm">
+        <div class="col-sm-3 time">
+          <div class="change" >1pm</div>
+        </div>
+        <div class="col-sm-6 mid">
+          <div class="input-group mb-3">
+            <span class="input-group-text userInput" id="inputGroup-sizing-default">Add entry</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="input4">
+          </div>
+        </div>
+        <div class="col-sm-3 edit">
+          <button type="button" class="btn btn-primary" id="please4">Save Entry</button>
+        </div>
+      </div>
+      <div class="row past" id="2pm">
+        <div class="col-sm-3 time">
+          <div class="change" >2pm</div>
+        </div>
+        <div class="col-sm-6 mid">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Add entry</span>
+            <input type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="input5">
+          </div>
+        </div>
+        <div class="col-sm-3 edit">
+          <button type="button" class="btn btn-primary" id="please5">Save Entry</button>
+        </div>
+      </div>
+      <div class="row past" id="3pm">
+        <div class="col-sm-3 time">
+          <div class="change" >3pm</div>
+        </div>
+        <div class="col-sm-6 mid">
+          <div class="input-group mb-3">
+            <span class="input-group-text userInput" id="inputGroup-sizing-default">Add entry</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="input6">
+          </div>
+        </div>
+        <div class="col-sm-3 edit">
+          <button type="button" class="btn btn-primary" id="please6">Save Entry</button>
+        </div>
+      </div>
+      <div class="row past" id="4pm">
+        <div class="col-sm-3 time">
+          <div class="change" >4pm</div>
+        </div>
+        <div class="col-sm-6 mid">
+          <div class="input-group mb-3">
+            <span class="input-group-text userInput" id="inputGroup-sizing-default">Add entry</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="input7">
+          </div>
+        </div>
+        <div class="col-sm-3 edit">
+          <button type="button" class="btn btn-primary" id="please7">Save Entry</button>
+        </div>
+      </div>
+      <div class="row past" id="5pm">
+        <div class="col-sm-3 time">
+          <div class="change" >5pm</div>
+        </div>
+        <div class="col-sm-6 mid">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Add entry</span>
+            <input type="text" class="form-control formInput" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="input8">
+          </div>
+        </div>
+        <div class="col-sm-3 edit">
+          <button type="button" class="btn btn-primary" id="please8">Save Entry</button>
+        </div>
+      </div>
+      
+
+    </div>
+
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous">
+  </script>
+    <script >
+      //Write js here
+        var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        var flash = moment().date();
+        var jiffy = moment().date();
+        var period = moment().month();
+        var currentHour = moment().hour();
+        var month_0_9 = {
+          1: "Friday",
+          2: "Saturday",
+          3: "Sunday",
+          4: "Monday",
+          5: "Tuesday",
+          6: "Wednesday",
+          7: "Thursday",
+          8: "Friday",
+          9: "Saturday",
+          10: "Sunday",
+          11: "Monday",
+          12: "Tuesday",
+          13: "Wednesday",
+          14: "Thursday",
+          15: "Friday",
+          16: "Saturday",
+          17: "Sunday",
+          18: "Monday",
+          19: "Tuesday",
+          20: "Wednesday",
+          21: "Thursday",
+          22: "Friday",
+          23: "Saturday",
+          24: "Sunday",
+          25: "Monday",
+          26: "Tuesday",
+          27: "Wednesday",
+          28: "Thursday",
+          29: "Friday",
+          30: "Saturday",
+          31: "Sunday",
+        }
+        
+        var month_1_2_10 = {
+          1: "Monday",
+          2: "Tuesday",
+          3: "Wednesday",
+          4: "Thursday",
+          5: "Friday",
+          6: "Saturday",
+          7: "Sunday",
+          8: "Monday",
+          9: "Tuesday",
+          10: "Wednesday",
+          11: "Thursday",
+          12: "Friday",
+          13: "Saturday",
+          14: "Sunday",
+          15: "Monday",
+          16: "Tuesday",
+          17: "Wednesday",
+          18: "Thursday",
+          19: "Friday",
+          20: "Saturday",
+          21: "Sunday",
+          22: "Monday",
+          23: "Tuesday",
+          24: "Wednesday",
+          25: "Thursday",
+          26: "Friday",
+          27: "Saturday",
+          28: "Sunday",
+          29: "Monday",
+          30: "Tuesday",
+          31: "Wednesday",
+        }
+        
+        var month_3_6 = {
+          1: "Tuesday",
+          2: "Wednesday",
+          3: "Thursday",
+          4: "Friday",
+          5: "Saturday",
+          6: "Sunday",
+          7: "Monday",
+          8: "Tuesday",
+          9: "Wednesday",
+          10: "Thursday",
+          11: "Friday",
+          12: "Saturday",
+          13: "Sunday",
+          14: "Monday",
+          15: "Tuesday",
+          16: "Wednesday",
+          17: "Thursday",
+          18: "Friday",
+          19: "Saturday",
+          20: "Sunday",
+          21: "Monday",
+          22: "Tuesday",
+          23: "Wednesday",
+          24: "Thursday",
+          25: "Friday",
+          26: "Saturday",
+          27: "Sunday",
+          28: "Monday",
+          29: "Tuesday",
+          30: "Wednesday",
+          31: "Thursday",
+        }
+        
+        var month_4 = {
+          1: "Sunday",
+          2: "Monday",
+          3: "Tuesday",
+          4: "Wednesday",
+          5: "Thursday",
+          6: "Friday",
+          7: "Saturday",
+          8: "Sunday",
+          9: "Monday",
+          10: "Tuesday",
+          11: "Wednesday",
+          12: "Thursday",
+          13: "Friday",
+          14: "Saturday",
+          15: "Sunday",
+          16: "Monday",
+          17: "Tuesday",
+          18: "Wednesday",
+          19: "Thursday",
+          20: "Friday",
+          21: "Saturday",
+          22: "Sunday",
+          23: "Monday",
+          24: "Tuesday",
+          25: "Wednesday",
+          26: "Thursday",
+          27: "Friday",
+          28: "Saturday",
+          29: "Sunday",
+          30: "Monday",
+          31: "Tuesday",
+        }
+       
+        var month_5 = {
+          1: "Tuesday",
+          2: "Wednesday",
+          3: "Thursday",
+          4: "Friday",
+          5: "Saturday",
+          6: "Sunday",
+          7: "Monday",
+          8: "Tuesday",
+          9: "Wednesday",
+          10: "Thursday",
+          11: "Friday",
+          12: "Saturday",
+          13: "Sunday",
+          14: "Monday",
+          15: "Tuesday",
+          16: "Wednesday",
+          17: "Thursday",
+          18: "Friday",
+          19: "Saturday",
+          20: "Sunday",
+          21: "Monday",
+          22: "Tuesday",
+          23: "Wednesday",
+          24: "Thursday",
+          25: "Friday",
+          26: "Saturday",
+          27: "Sunday",
+          28: "Monday",
+          29: "Tuesday",
+          30: "Wednesday",
+          31: "Thursday",
+        }
+        
+        var month_7 = {
+          1: "Sunday",
+          2: "Monday",
+          3: "Tuesday",
+          4: "Wednesday",
+          5: "Thursday",
+          6: "Friday",
+          7: "Saturday",
+          8: "Sunday",
+          9: "Monday",
+          10: "Tuesday",
+          11: "Wednesday",
+          12: "Thursday",
+          13: "Friday",
+          14: "Saturday",
+          15: "Sunday",
+          16: "Monday",
+          17: "Tuesday",
+          18: "Wednesday",
+          19: "Thursday",
+          20: "Friday",
+          21: "Saturday",
+          22: "Sunday",
+          23: "Monday",
+          24: "Tuesday",
+          25: "Wednesday",
+          26: "Thursday",
+          27: "Friday",
+          28: "Saturday",
+          29: "Sunday",
+          30: "Monday",
+          31: "Tuesday",
+        }
+        
+        var month_8_11 = {
+          1: "Wednesday",
+          2: "Thursday",
+          3: "Friday",
+          4: "Saturday",
+          5: "Sunday",
+          6: "Monday",
+          7: "Tuesday",
+          8: "Wednesday",
+          9: "Thursday",
+          10: "Friday",
+          11: "Saturday",
+          12: "Sunday",
+          13: "Monday",
+          14: "Tuesday",
+          15: "Wednesday",
+          16: "Thursday",
+          17: "Friday",
+          18: "Saturday",
+          19: "Sunday",
+          20: "Monday",
+          21: "Tuesday",
+          22: "Wednesday",
+          23: "Thursday",
+          24: "Friday",
+          25: "Saturday",
+          26: "Sunday",
+          27: "Monday",
+          28: "Tuesday",
+          29: "Wednesday",
+          30: "Thursday",
+          31: "Friday",
+        }
+
+
+      function todaysDate(){
+        if(period == 0 || period == 9){
+          var today = (month_0_9[flash]);
+          return today;
+
+        }else if (period == 1 || period == 2 || months == 10){
+          var today = (month_1_2_10[flash]);
+          return today;
+
+        }else if (period == 3 || period == 6){
+          var today = (month_3_6[flash]);
+          return today;
+
+        }else if (period == 4){
+          var today = (month_4[flash]);
+          return today;
+
+        }else if (period == 5){
+          var today = (month_5[flash]);
+          return today;
+
+        }else if (period == 6){
+          var today = (month_6[flash]);
+          return today;
+
+        }else if (period == 8 || period == 11){
+          var today = (month_8_11[flash]);
+          return today;
+
+        }
+        
+
+        months[period];
+        
+      }
+
+      $('#currentDay').text("Today is " + todaysDate() + ", " + months[period] + " " + flash + surName());
+
+      function surName(){
+        if(flash == 1 || flash == 21 || flash == 31){
+          var suffix = "st";
+        }else if(flash == 2 || flash == 22){
+          var suffix = "nd";
+        }else if(flash == 3 || flash == 23){
+          var suffix = "rd";
+        } else{
+          var suffix = "th";
+        }
+        return suffix;
+      }
+
+      setInterval(function(){
+       if(currentHour == 9){
+         $('#9am').removeClass("past");
+         $('#9am').addClass("active");
+       } if(currentHour < 9){
+        $('#9am').removeClass("past");
+         $('#9am').addClass("future");
+       } if(currentHour == 10){
+        $('#10am').removeClass("past");
+         $('#10am').addClass("active");
+       } if(currentHour < 10){
+        $('#10am').removeClass("past");
+         $('#10am').addClass("future");
+       } if(currentHour == 11){
+        $('#11am').removeClass("past");
+         $('#11am').addClass("active");
+       } if(currentHour < 11){
+        $('#11am').removeClass("past");
+         $('#11am').addClass("future");
+       } if(currentHour == 12){
+        $('#12pm').removeClass("past");
+         $('#12pm').addClass("active");
+       } if(currentHour < 12){
+        $('#12pm').removeClass("past");
+         $('#12pm').addClass("future");
+       } if(currentHour == 13){
+        $('#1pm').removeClass("past");
+         $('#1pm').addClass("active");
+       } if(currentHour < 13){
+        $('#1pm').removeClass("past");
+         $('#1pm').addClass("future");
+       } if(currentHour == 14){
+        $('#2pm').removeClass("past");
+         $('#2pm').addClass("active");
+       } if(currentHour < 14){
+        $('#2pm').removeClass("past");
+         $('#2pm').addClass("future");
+       } if(currentHour == 15){
+        $('#3pm').removeClass("past");
+         $('#3pm').addClass("active");
+       } if(currentHour < 15){
+        $('#3pm').removeClass("past");
+         $('#3pm').addClass("future");
+       } if(currentHour == 16){
+        $('#4pm').removeClass("past");
+         $('#4pm').addClass("active");
+       } if(currentHour < 16){
+        $('#4pm').removeClass("past");
+         $('#4pm').addClass("future");
+       } if(currentHour == 17){
+        $('#5pm').removeClass("past");
+         $('#5pm').addClass("active");
+       } if(currentHour < 17){
+        $('#5pm').removeClass("past");
+         $('#5pm').addClass("future");
+       }
+     }, 1000);
+
+
+      $(document).ready(function () {
+        $('#please').on("click", function(){
+          var asAbove = $('#input0');
+          
+        localStorage.setItem("9am", asAbove.val());
+        $('#talk').text(asAbove.val());
+        
+      })
+        $('#please1').on("click", function(){
+          var soBelow = $('#input1');
+          
+        localStorage.setItem("10am", soBelow.val());
+      })
+        $('#please2').on("click", function(){
+          var leftSide= $('#input2');
+          
+        localStorage.setItem("11am", leftSide.val());
+      })
+        $('#please3').on("click", function(){
+          var rightSide = $('#input3');
+          
+        localStorage.setItem("12am", rightSide.val());
+      })
+        $('#please4').on("click", function(){
+          var down = $('#input4');
+          
+        localStorage.setItem("1pm", down.val());
+      })
+        $('#please5').on("click", function(){
+          var nextUp = $('#input5');
+          
+        localStorage.setItem("2pm", nextUp.val());
+      })
+        $('#please6').on("click", function(){
+          var cool = $('#input6');
+          
+        localStorage.setItem("3pm", cool.val());
+      })
+        $('#please7').on("click", function(){
+          var sweet = $('#input7');
+          
+        localStorage.setItem("4pm", sweet.val());
+      })
+        $('#please8').on("click", function(){
+          var inp = $('#input8');
+          
+        localStorage.setItem("5pm", inp.val());
+      })
+      })
+     
+
+      
+     
+     
+    </script>
+  
+  </body>
+</html>
